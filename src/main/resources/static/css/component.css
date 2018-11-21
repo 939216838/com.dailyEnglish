@@ -94,9 +94,21 @@
 	text-decoration: none;
 	outline: none;
 }
+.mb2o{
+    margin-bottom: 20px
+}
+.mb2o a{
+    text-decoration: none;
+    outline: none;
+}
 .submit {
 	padding: 15px;
 	margin-top: 20px;
+	display: block;
+}
+.register {
+	padding: 15px;
+	margin-top: 40px;
 	display: block;
 }
 .act-but{
@@ -105,4 +117,11 @@
 	font-size: 20px;
 	border-radius: 50px;
 	background: #0096e6;
+}
+.act-buto{
+    line-height: 40px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 50px;
+    background: #0096e6;
 }
