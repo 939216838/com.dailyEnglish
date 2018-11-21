@@ -1,13 +1,41 @@
 package com.dailyEnglish.pojo;
 
+import javax.persistence.criteria.From;
 import java.time.LocalDateTime;
 
 public class Word {
     private String word;
+    private String query;
     private String bytes;
     private LocalDateTime today;
+    private String from;
+    private String to;
 
     public Word() {
+    }
+
+    public String getQuery() {
+        return query;
+    }
+
+    public void setQuery(String query) {
+        this.query = query;
+    }
+
+    public String getFrom() {
+        return from;
+    }
+
+    public void setFrom(String from) {
+        this.from = from;
+    }
+
+    public String getTo() {
+        return to;
+    }
+
+    public void setTo(String to) {
+        this.to = to;
     }
 
     public String getWord() {
