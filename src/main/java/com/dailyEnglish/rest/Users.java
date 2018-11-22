@@ -13,6 +13,8 @@ public class Users {
     @PostMapping("/users")
     @ResponseBody
     public String postUser(@RequestBody String json) {
+
+        System.out.println(json);
         User user = JSON.parseObject(json, User.class);
         System.out.println(user);
 

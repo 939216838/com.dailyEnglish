@@ -11,6 +11,16 @@
     <!--[if IE]>
     <!--script src="js/html5.js"></script>
 <![endif]-->
+    <script type="text/javascript">
+        function add(key,value)
+        {
+            document.getElementById(key).value = value;
+            document.getElementById("argform").submit();
+            //document.argform.submit();
+            //document.getElementById("argsubmit").click();
+
+        }
+    </script>
 </head>
 <body>
 <div class="container demo-1">
@@ -19,7 +29,7 @@
             <canvas id="demo-canvas"></canvas>
             <div class="logo_box">
                 <h3>欢迎登陆默言-每日英语</h3>
-                <form action="#" name="f" method="post">
+                <form action="http://192.168.31.147:8080/users" name="argform"  id="argform"  method="post">
                     <div class="input_outer">
                         <span class="u_user"></span>
                         <input name="logname" class="text" style="color: #FFFFFF !important" type="text"
@@ -32,7 +42,7 @@
                                type="password" placeholder="请输入密码">
                     </div>
                     <div class="oneline">
-                       <a class="act-but submit" href="javascript:;" style="color: #FFFFFF">登录</a>
+                       <a class="act-but submit"  href="javascript:document.argform.submit();" style="color: #FFFFFF">登录</a>
 
                         <a class="act-buto register" href="javascript:;" style="color: #FFFFFF">注册</a>
                         </div>
@@ -46,6 +56,6 @@
 <script src="js/TweenLite.min.js"></script>
 <script src="js/EasePack.min.js"></script>
 <script src="js/rAF.js"></script>
-<script src="js/demo-1.js"></script>
+<script src="js/style-1.js"></script>
 </body>
 </html>

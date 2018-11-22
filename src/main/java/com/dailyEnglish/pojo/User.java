@@ -1,8 +1,8 @@
 package com.dailyEnglish.pojo;
 
 public class User {
-    private String username;
-    private String password;
+    private String logname;
+    private String logpass;
     private String email;
     private String birthday;
     private String phoneNum;
@@ -12,20 +12,20 @@ public class User {
 
     }
 
-    public String getUsername() {
-        return username;
+    public String getLogname() {
+        return logname;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setLogname(String logname) {
+        this.logname = logname;
     }
 
-    public String getPassword() {
-        return password;
+    public String getLogpass() {
+        return logpass;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setLogpass(String logpass) {
+        this.logpass = logpass;
     }
 
     public String getEmail() {
@@ -52,14 +52,5 @@ public class User {
         this.phoneNum = phoneNum;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", email='" + email + '\'' +
-                ", birthday='" + birthday + '\'' +
-                ", phoneNum='" + phoneNum + '\'' +
-                '}';
-    }
+
 }
