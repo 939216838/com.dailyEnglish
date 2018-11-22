@@ -2,22 +2,69 @@
 <head>
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>默言-每日英语</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
     <link rel="stylesheet" type="text/css" href="css/demo.css"/>
     <!--必要样式-->
+    <script src="webjs/jquery.min.js"></script>
+    <script src="webjs/Jquery.md5.js"></script>
     <link rel="stylesheet" type="text/css" href="css/component.css"/>
     <!--[if IE]>
     <!--script src="js/html5.js"></script>
 <![endif]-->
+
     <script type="text/javascript">
-        function add(key,value)
-        {
-            document.getElementById(key).value = value;
-            document.getElementById("argform").submit();
-            //document.argform.submit();
-            //document.getElementById("argsubmit").click();
+
+
+        // alert($("input:password").val())
+
+
+        function subtotijiao() {
+            var username = $("input[name='logname']").val();
+
+            var password = $("input[name='logpass']").val();
+            alert(username);
+            alert(password);
+            var newpass = $.md5(password)
+            alert(newpass);
+            $.ajax({
+                //提交数据的类型 POST GET
+                type: "POST",
+                //提交的网址
+                url: "/users/login",
+                contentType: "application/json; charset=utf-8",
+
+                //提交的数据
+                data: JSON.stringify({
+                    username: username,
+                    password: newpass
+                }),
+                //返回数据的格式
+                dataType: "json",//"xml", "html", "script", "json", "jsonp", "text".
+                // //在请求之前调用的函数
+                // beforeSend: function () {
+                //
+                //
+                //     $("#msg").html("logining");
+                // },
+                //成功返回之后调用的函数
+                // success: function (data) {
+                //     $("#msg").html(decodeURI(data));
+                // },
+                //调用执行后调用的函数
+                complete: function (XMLHttpRequest, textStatus) {
+                    alert(XMLHttpRequest.responseText);
+                    // alert(textStatus);
+                    HideLoading();
+                }
+                // //调用出错执行的函数
+                // error: function () {
+                //     //请求出错处理
+                // }
+            });
+
 
         }
     </script>
@@ -29,10 +76,11 @@
             <canvas id="demo-canvas"></canvas>
             <div class="logo_box">
                 <h3>欢迎登陆默言-每日英语</h3>
-                <form action="http://192.168.31.147:8080/users" name="argform"  id="argform"  method="post">
+                <form action="http://192.168.31.236/users" name="argform" id="argform" method="post">
                     <div class="input_outer">
                         <span class="u_user"></span>
                         <input name="logname" class="text" style="color: #FFFFFF !important" type="text"
+                               value=""
                                placeholder="请输入账户">
                     </div>
                     <div class="input_outer">
@@ -42,11 +90,9 @@
                                type="password" placeholder="请输入密码">
                     </div>
                     <div class="oneline">
-                       <a class="act-but submit"  href="javascript:document.argform.submit();" style="color: #FFFFFF">登录</a>
+                        <a class="act-but submit" href="javaScript:;subtotijiao();" style="color: #FFFFFF">登录</a>
 
                         <a class="act-buto register" href="javascript:;" style="color: #FFFFFF">注册</a>
-                        </div>
-
                     </div>
                 </form>
             </div>
@@ -57,5 +103,6 @@
 <script src="js/EasePack.min.js"></script>
 <script src="js/rAF.js"></script>
 <script src="js/style-1.js"></script>
+
 </body>
 </html>

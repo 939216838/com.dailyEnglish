@@ -1,4 +1,4 @@
-package com.dailyEnglish;
+package com.dailyenglish;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,4 +1,4 @@
-package com.dailyEnglish.utils;
+package com.dailyenglish.utils;
 
 import java.util.HashMap;
 import java.util.Map;

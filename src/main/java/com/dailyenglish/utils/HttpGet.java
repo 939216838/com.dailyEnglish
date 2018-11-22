@@ -1,4 +1,4 @@
-package com.dailyEnglish.utils;
+package com.dailyenglish.utils;
 
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;

@@ -1,6 +1,5 @@
-package com.dailyEnglish.pojo;
+package com.dailyenglish.pojo;
 
-import javax.persistence.criteria.From;
 import java.time.LocalDateTime;
 
 public class Word {
