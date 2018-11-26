@@ -16,12 +16,12 @@ import org.springframework.stereotype.Component;
 
 public class UserDaoImpl implements UserDao {
 
-	private final JdbcTemplate jdbcTemplate;
+//	private final JdbcTemplate jdbcTemplate;
 
-	@Autowired
-	public UserDaoImpl(JdbcTemplate jdbcTemplate) {
-		this.jdbcTemplate = jdbcTemplate;
-	}
+//	@Autowired
+//	public UserDaoImpl(JdbcTemplate jdbcTemplate) {
+//		this.jdbcTemplate = jdbcTemplate;
+//	}
 
 	@Override
 	public String findOneUser(String logname, String logpass) {
@@ -32,7 +32,7 @@ public class UserDaoImpl implements UserDao {
 
 			Object[] parameter = new Object[]{logname, logpass};
 //			Object[] parameter = new Object[]{"shanhongfeng", "202cb962ac59075b964b07152d234b70"};
-			num = jdbcTemplate.queryForObject(sql, parameter, Integer.class);
+//			num = jdbcTemplate.queryForObject(sql, parameter, Integer.class);
 
 			if (num == 0) {
 				return null;
